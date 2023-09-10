@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Ubuntu&family=Varela&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    background-color:rgb(193, 40, 91);
+    color: white;
+    height: 65px;
+    font-size: 27px;
+    align-items: center;
+    display: flex;
+    padding: 0 12px;
+    font-family: 'IBM Plex Sans', sans-serif;
+;
+
+
+}
+nav ul{
+    list-style-type: none;
+}
+.gameContainer{
+    
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+
+
+}
+.Container {
+    display: grid;
+    grid-template-rows: repeat( 3 ,10vw);
+    grid-template-columns: repeat(3 ,10vw);
+    font-family: 'IBM Plex Sans', sans-serif;
+    position: relative;
+
+}
+.box{
+    border: 2px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.box:hover{
+    
+background-color: rgb(206, 239, 228);
+}
+.info{
+    font-size: 25px;
+}
+.gameInfo{
+    padding: 0 34px;
+    font-family: 'Varela', sans-serif;
+}
+        
+.gameInfo h1{
+    font-size: 1rem;
+
+}
+
+.imgbox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+#reset{
+    margin: 0 23px;
+    padding: 1px 18px;
+    background: rgb(116, 227, 116);
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.line{
+    background-color: black;
+    height: 3px;
+    width: 0vw;
+    position:absolute;
+    background-color:red;
+    transition: width 1s ease-in-out;
+}
+@media  screen and (max-width: 400px) {
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .gameInfo{
+        margin-top: 34px;
+    }
+    
+    .Container{
+        display: grid;
+        grid-template-rows: repeat(3 20vw);
+        grid-template-columns: repeat(3 20vw);
+    }
+}
